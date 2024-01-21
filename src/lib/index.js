@@ -1,4 +1,5 @@
 // place files you want to import through the `$lib` alias in this folder.
-import Button from "./Button.svelte"
+import Box from './Box.svelte';
+import Button from './Button.svelte';
 
-export { Button }
+export { Box, Button };
