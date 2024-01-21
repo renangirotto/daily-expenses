@@ -22,7 +22,7 @@
 <ul class="list">
 	{#each list as item}
 		<li class="list-item">
-			<a class="bank" class:negative={item.currentAmount < 0} href="/teste">
+			<a class="bank" class:is-negative={item.currentAmount < 0} href="/teste">
 				<div class="icon">
 					{#if item.automaticIncome}
 						<div class="icon-svg" aria-hidden="true">
@@ -43,11 +43,13 @@
 
 <style>
 	.amount {
+		--_color: #0090ed;
+
 		grid-area: amount;
 		align-self: center;
 		font-size: 1.125rem;
-		font-weight: 500;
-		color: #0090ed;
+		font-weight: 600;
+		color: var(--_color);
 	}
 
 	.bank {
@@ -68,9 +70,9 @@
 			filter: opacity(0.75);
 		}
 
-		&.negative {
+		&.is-negative {
 			& .amount {
-				color: #ff4f5e;
+				--_color: #ff4f5e;
 			}
 		}
 	}
@@ -84,6 +86,8 @@
 
 		& img {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 
