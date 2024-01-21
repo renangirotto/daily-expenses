@@ -1,5 +1,5 @@
 <script>
-	import '@fontsource-variable/inter';
+	import '@fontsource-variable/montserrat';
 </script>
 
 <slot />
